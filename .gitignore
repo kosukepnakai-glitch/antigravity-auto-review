@@ -1,0 +1,11 @@
+# Temporary test files
+work/
+*.tmp
+*.bak
+*.disabled
+
+# OS / Editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

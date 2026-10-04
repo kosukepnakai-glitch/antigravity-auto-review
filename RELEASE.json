@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "packageVersion": "3.0.0",
+  "name": "antigravity-auto-review",
+  "description": "Safe PreToolUse hooks and isolated tracked Git helpers for Google Antigravity on Windows",
+  "supportedOS": "Windows",
+  "testedAntigravityVersions": [
+    "2.18.1.0",
+    "2.19.1.0"
+  ],
+  "requirements": {
+    "os": "Windows 10 / 11",
+    "node": ">=20.0.0",
+    "powershell": "Windows PowerShell 5.1 or PowerShell 7"
+  },
+  "scope": "Global hook and guidance for 5 tools; native command grants enrolled per project.",
+  "executableChecks": [
+    {
+      "file": "auto_review.mjs",
+      "sha256": "4875b6e80c36bf141ded17c77fbfcf248a6b27c811407d62acf4032a59edc429"
+    },
+    {
+      "file": "install.ps1",
+      "sha256": "c946586a63ad5d34ccc1e28d1c56096d5af91b021dca4fa7a57fa078afe6459a"
+    },
+    {
+      "file": "restricted-driver.mjs",
+      "sha256": "9c48343ecdbd9be2f999257d99330a2d7ff6f639f39c045cfb04db23f8046ea3"
+    },
+    {
+      "file": "restricted-git.mjs",
+      "sha256": "0e13fcae36cae1d346858c55bd8bd4db2934302e80960d0849c00213ee129031"
+    },
+    {
+      "file": "restricted-launcher.ps1",
+      "sha256": "5b327b04098f9ec95fcf344303b1c5747bcb94a1e0bdf04d30c753de2299b3a3"
+    },
+    {
+      "file": "restricted-policy.mjs",
+      "sha256": "844a5a5f48df33c2145a4f192be5704b635326f0824f15d49c59b966b74ab367"
+    },
+    {
+      "file": "tests/auto_review.test.mjs",
+      "sha256": "013b9dcc1e97fafa4ec516f6869f7d5c45f7a208300bbcc4fe9f7ae7f726c82a"
+    },
+    {
+      "file": "tests/install.test.mjs",
+      "sha256": "510da04c87168fbd2fbbc05a824d5eb0435398c13a7792321ca67d2078572f73"
+    },
+    {
+      "file": "tests/restricted-integration.test.mjs",
+      "sha256": "1e3bafb953e0fd5d29b600f23fb97fbc9365c464e31642cbb34532de0964aca6"
+    }
+  ]
+}
