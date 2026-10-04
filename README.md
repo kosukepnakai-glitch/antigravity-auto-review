@@ -57,24 +57,38 @@
 * **PowerShell**: Windows PowerShell 5.1 または PowerShell 7
 * **Antigravity**: v2.19.1.0 以降
 
-### インストール（3ステップ）
+### インストール方法（選べる2つの方法）
 
-1. **本リポジトリをダウンロード（または `git clone`）**
-   ```powershell
-   git clone https://github.com/kosukepnakai-glitch/antigravity-auto-review.git
-   cd antigravity-auto-review
-   ```
-2. **インストーラーを実行**
-   ```powershell
-   # 事前チェック（ファイルの変更は行いません）
-   & '.\install.ps1' -AllConversations -CheckOnly
+#### 方法 A：公式プラグインとして配置（おすすめ）
+Antigravity の標準プラグインディレクトリ（`~/.gemini/config/plugins/`）にクローンまたは解凍するだけで、Antigravity が自動認識します。
 
-   # グローバル設定へ配置
-   & '.\install.ps1' -AllConversations
-   ```
-3. **Antigravity で有効化**
-   * Antigravity の **Settings > Customizations > Hooks** を開き、`codex-style-auto-review` をトグル **ON** にします。
-   * これだけで、通常ファイルの作成・編集が自動審査されるようになります！
+```powershell
+# グローバルプラグインフォルダーへクローン
+git clone https://github.com/kosukepnakai-glitch/antigravity-auto-review.git "$env:USERPROFILE\.gemini\config\plugins\antigravity-auto-review"
+
+# 初期セットアップ（安全のためのハッシュ生成・事前チェック）
+cd "$env:USERPROFILE\.gemini\config\plugins\antigravity-auto-review"
+& '.\install.ps1' -AllConversations
+```
+
+#### 方法 B：任意のフォルダーから手動インストール
+任意の場所にダウンロード・解凍してセットアップすることも可能です。
+
+```powershell
+# 本リポジトリをダウンロード（または git clone）
+git clone https://github.com/kosukepnakai-glitch/antigravity-auto-review.git
+cd antigravity-auto-review
+
+# 事前チェック（ファイルの変更は行いません）
+& '.\install.ps1' -AllConversations -CheckOnly
+
+# グローバル設定へ配置
+& '.\install.ps1' -AllConversations
+```
+
+### 有効化
+Antigravity の **Settings > Customizations > Hooks**（または Plugins）を開き、`codex-style-auto-review`（または `antigravity-auto-review`）をトグル **ON** にします。  
+これだけで、通常ファイルの作成・編集が自動審査されるようになります！
 
 > 💡 **Git確認の自動化（確認0回）も使いたい場合：**  
 > 詳しい登録手順は [利用ガイド（USER-GUIDE.ja.md）](./USER-GUIDE.ja.md) をご覧ください（2ステップで簡単に追加できます）。

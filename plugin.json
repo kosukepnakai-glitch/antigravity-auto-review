@@ -1,0 +1,21 @@
+{
+  "name": "antigravity-auto-review",
+  "displayName": "Antigravity Auto-Review",
+  "version": "3.0.0",
+  "description": "Safe PreToolUse hooks and isolated tracked Git helpers for Google Antigravity on Windows",
+  "author": {
+    "name": "kosukepnakai-glitch"
+  },
+  "homepage": "https://github.com/kosukepnakai-glitch/antigravity-auto-review",
+  "repository": "https://github.com/kosukepnakai-glitch/antigravity-auto-review",
+  "license": "MIT",
+  "keywords": [
+    "antigravity",
+    "hook",
+    "pretooluse",
+    "git",
+    "automation",
+    "productivity",
+    "windows"
+  ]
+}
